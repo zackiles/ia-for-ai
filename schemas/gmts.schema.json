@@ -1,0 +1,97 @@
+{  
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/zackiles/ia-for-ai/main/schemas/gtms.schema.json",
+  "title": "Graph Type Metadata Schema (GTMS)",
+  "type": "object",
+  "required": [
+    "structure",
+    "capabilities",
+    "nodeCount",
+    "edgeCount",
+    "minInDegree",
+    "maxInDegree",
+    "minOutDegree",
+    "maxOutDegree"
+  ],
+  "properties": {
+    "structure": {
+      "type": "string",
+      "enum": [
+        "graph",
+        "dag",
+        "tree",
+        "forest",
+        "hypergraph",
+        "multigraph"
+      ],
+      "description": "Broad topological class of the graph"
+    },
+    "variant": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "rooted",
+          "binary",
+          "nary",
+          "complete",
+          "strongly_connected"
+        ]
+      },
+      "uniqueItems": true,
+      "description": "Optional tags refining the graph structure"
+    },
+    "capabilities": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 15,
+      "description": "Bit-flag encoding of graph capabilities: 1=directed, 2=cyclic, 4=multi_edges, 8=shared_children"
+    },
+    "nodeCount": { 
+      "type": "integer", 
+      "minimum": 0,
+      "description": "Total number of nodes in the graph"
+    },
+    "edgeCount": { 
+      "type": "integer", 
+      "minimum": 0,
+      "description": "Total number of edges in the graph"
+    },
+    "maxDepth": { 
+      "type": "integer", 
+      "minimum": 0,
+      "description": "Maximum depth of the graph if applicable (such as in trees or DAGs)"
+    },
+    "rootNodes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of identifiers for root nodes, if applicable"
+    },
+    "minInDegree": { 
+      "type": "integer", 
+      "minimum": 0,
+      "description": "Minimum number of incoming edges per node"
+    },
+    "maxInDegree": { 
+      "type": "integer", 
+      "minimum": 0,
+      "description": "Maximum number of incoming edges per node"
+    },
+    "minOutDegree": { 
+      "type": "integer", 
+      "minimum": 0,
+      "description": "Minimum number of outgoing edges per node"
+    },
+    "maxOutDegree": { 
+      "type": "integer", 
+      "minimum": 0,
+      "description": "Maximum number of outgoing edges per node"
+    },
+    "connectedComponents": { 
+      "type": "integer", 
+      "minimum": 1,
+      "description": "Number of disconnected subgraphs in the overall graph"
+    }
+  },
+  "additionalProperties": false
+}
