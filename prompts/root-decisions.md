@@ -1,8 +1,8 @@
 # Root Decisions - System Decision Framework
-Analyzes a detailed decision-point document to identify its foundational choices and their cascading impacts.
+Analyzes a detailed decision-points in a document to identify its foundational choices and their cascading impacts.
 
 > [!NOTE]
-> Used as part of a multi-turn prompt, as the final stage after [decision-making-framework.md](decision-making-framework.md)
+> Used as part of a multi-turn generative prompt, as the final stage after [decision-making-framework.md](decision-making-framework.md)
 
 ## Use Cases
 *   Identifying and boiling down the most influential choices in a pre-defined decision framework.
