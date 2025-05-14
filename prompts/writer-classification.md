@@ -36,61 +36,82 @@ This template performs structured analysis of an author’s writing to reverse-e
 
 ---
 
-````txt
-TEMPLATE_PROMPT
+````markdown
+# Prompt: Writer Classification
 
-Task  
-Analyze the following corpus and render five ordered sections exactly as specified, using terse dependency‑grammar sentences (minimal prepositional stacking, subject‑verb‑object precedence, left‑branch modifiers). Do not add other headings, prefatory text, or conclusions.
+**Objective**: To analyze an author's writing style, temperament, lexical idiosyncrasies, and psychological profile from a given text corpus, and subsequently render a generative template capable of mimicking that author's style.
 
-===START_AUTHOR_TEXT===
-{$AUTHORS_TEXT}
-===END_AUTHOR_TEXT===
+**AI Role**: You are an expert Linguist, Stylometrist, and Computational Psychoanalyst. Your task is to meticulously dissect the provided author's text, identify unique and recurring patterns, and structure these findings into a detailed, multi-faceted analysis and a functional generative template.
 
-Section 1  Style and Prose  
-• Sentence geometry – mean clause length, dominant dependency direction, coordination vs subordination ratios.  
-• Register oscillation – shifts between technical, colloquial, poetic.  
-• Formatting devices – lists, code fences, inline markup, whitespace tricks.  
-• Prosody markers – expletives, ellipses, dashes, interrobangs, emoji.  
-• Rhythm tactics – anaphora, polysyndeton, abrupt enjambment.
+---
 
-Section 2  Temperament  
-• Dominant affect (e.g., sardonic, earnest).  
-• Motivational posture (intrinsic curiosity, status display, evangelism).  
-• Self‑presentation pattern (self‑effacement, bravado, didactic stance).  
-• Social orientation (collaborative, antagonistic, mentor‑like).  
+**Inputs**:
+
+1.  **Author's Text Corpus (`{{AUTHORS_TEXT}}`)**:
+    ```
+    ===START_AUTHOR_TEXT===
+    {{AUTHORS_TEXT}}
+    ===END_AUTHOR_TEXT===
+    ```
+    *(This section will contain the complete text corpus provided by the author for analysis.)*
+
+---
+
+**Task**:
+
+Analyze the following corpus (`{{AUTHORS_TEXT}}`) and render five ordered sections exactly as specified, using terse dependency‑grammar sentences (minimal prepositional stacking, subject‑verb‑object precedence, left‑branch modifiers). Do not add other headings, prefatory text, or conclusions.
+
+---
+
+**Output Format and Structure**:
+
+The output must consist of the following five sections, ordered and formatted precisely as detailed below:
+
+**Section 1 Style and Prose**
+• Sentence geometry – mean clause length, dominant dependency direction, coordination vs subordination ratios.
+• Register oscillation – shifts between technical, colloquial, poetic.
+• Formatting devices – lists, code fences, inline markup, whitespace tricks.
+• Prosody markers – expletives, ellipses, dashes, interrobangs, emoji.
+• Rhythm tactics – anaphora, polysyndeton, abrupt enjambment.
+
+**Section 2 Temperament**
+• Dominant affect (e.g., sardonic, earnest).
+• Motivational posture (intrinsic curiosity, status display, evangelism).
+• Self‑presentation pattern (self‑effacement, bravado, didactic stance).
+• Social orientation (collaborative, antagonistic, mentor‑like).
 • Emotional volatility cues (caps bursts, apology loops, sarcasm density).
 
-Section 3  Lexical Idiosyncrasies  
+**Section 3 Lexical Idiosyncrasies**
 Return a markdown table:
 
-| token | gloss/meaning | function or origin note | part of speech | contextual evidence (quoted fragment) |
+| token | gloss/meaning | function or origin note | part of speech | contextual evidence (quoted fragment) |
 
-Include 8‑12 rows, choose tokens rare in mainstream North‑American English (zipf < 4) or author‑coined.
+Include 8‑12 rows, choose tokens rare in mainstream North‑American English (zipf < 4) or author‑coined.
 
-Section 4  Psychoanalytic Sketch  
-• Map ego, superego, id manifestations with textual proof.  
-• Big‑Five estimates (Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism) on ↑/↕/↓ scale; justify each.  
-• Ideological signals (hacker ethos, academic rigor, counterculture lean).  
-• Coping mechanisms (humor, meticulous detail, bravado).  
+**Section 4 Psychoanalytic Sketch**
+• Map ego, superego, id manifestations with textual proof.
+• Big‑Five estimates (Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism) on ↑/↕/↓ scale; justify each.
+• Ideological signals (hacker ethos, academic rigor, counterculture lean).
+• Coping mechanisms (humor, meticulous detail, bravado).
 • Recurring metaphors revealing core schema (e.g., war, game, pilgrimage).
 
-Section 5  Generative Template  
-Sub‑section A  Macro‑Structure  
-1  Preamble token (author‑signature, date‑stamp).  
-2  Hook: imperative + rhetorical question.  
-3  Body loop: for each topic, produce SVO core → inline code or math → parenthetical digression.  
-4  Enumeration block: bullet list with colon then two‑clause elaboration.  
-5  Digression stack: quote external source → relate to niche detail.  
-6  Abrupt closure (future hint or mock threat).
+**Section 5 Generative Template**
+Sub‑section A Macro‑Structure
+1  Preamble token (author‑signature, date‑stamp).
+2  Hook: imperative + rhetorical question.
+3  Body loop: for each topic, produce SVO core → inline code or math → parenthetical digression.
+4  Enumeration block: bullet list with colon then two‑clause elaboration.
+5  Digression stack: quote external source → relate to niche detail.
+6  Abrupt closure (future hint or mock threat).
 
-Sub‑section B  Symbolic Rules  
-• Vocabulary partitions: {Jargon}, {Slang}, {Insult}, {Citation}.  
-• Selector algorithm: every third clause swap register Jargon⇄Slang.  
-• Dependency order: root verb early, NP complements left, adjuncts right.  
-• Rare‑token injection probability p = 0.07 from idiolect list.  
+Sub‑section B Symbolic Rules
+• Vocabulary partitions: {Jargon}, {Slang}, {Insult}, {Citation}.
+• Selector algorithm: every third clause swap register Jargon⇄Slang.
+• Dependency order: root verb early, NP complements left, adjuncts right.
+• Rare‑token injection probability p = 0.07 from idiolect list.
 • Punctuation stochasticity: choose among “— … !! ?!” with weights [0.2,0.4,0.3,0.1].
 
-Sub‑section C  Deterministic Prompt Skeleton  
+Sub‑section C Deterministic Prompt Skeleton
 Provide a canonical skeleton the generator can fill:
 
 ```
@@ -105,7 +126,15 @@ Provide a canonical skeleton the generator can fill:
 
 ```
 
-End of template.
+---
+
+**Guidelines for Generation**:
+
+*   Adhere strictly to the five-section structure and the specific formatting instructions for each, including the markdown table in Section 3 and the sub-sections in Section 5.
+*   All analytical statements must be based on the provided `{{AUTHORS_TEXT}}`.
+*   Employ terse, dependency-grammar sentences throughout your analysis.
+*   Do not introduce any text, headings, or commentary outside of the defined five sections.
+
 ````
 
 ## Example Output
