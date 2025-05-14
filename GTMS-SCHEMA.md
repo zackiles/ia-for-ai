@@ -1,16 +1,10 @@
 # RFC: Graph Type Metadata Schema (GTMS)
 
-## Purpose
-
 The Graph Type Metadata Schema (GTMS) defines a standard format for expressing metadata describing the structural and topological characteristics of graphs. GTMS enables tools and systems to quickly inspect and validate essential properties of graphs, facilitating interoperability, algorithm selection, query optimization, and data exchange across diverse environments.
-
----
 
 ## Overview
 
 GTMS describes graphs independently from their detailed structural representation (such as edge lists, adjacency matrices, or node-link formats). It captures high-level properties, including the general graph structure, directionality, cyclicity, connectivity, and degree constraints.
-
----
 
 ## JSON Schema Specification
 
@@ -116,8 +110,6 @@ The GTMS schema conforms to JSON Schema (Draft 2020-12):
 }
 ```
 
----
-
 ## Example Usage
 
 ### Rooted Tree
@@ -158,8 +150,6 @@ The GTMS schema conforms to JSON Schema (Draft 2020-12):
 }
 ```
 
----
-
 ## Schema Properties Explained
 
 ### Structure and Variants
@@ -194,8 +184,6 @@ The `capabilities` integer encodes key graph properties:
 
 For example, a directed cyclic graph with multi-edges would have capabilities value `7` (`0111` binary).
 
----
-
 ## Intended Use and Application
 
 GTMS is designed for scenarios where quick introspection of graph properties is required without loading or traversing entire datasets. Common applications include:
@@ -204,8 +192,6 @@ GTMS is designed for scenarios where quick introspection of graph properties is 
 * Algorithm selection and optimization (e.g., cycle detection, shortest path algorithms).
 * Efficient query planning and resource allocation.
 * Cross-tool and cross-system interoperability of graph data.
-
----
 
 ## Implementation Guidance
 
@@ -220,8 +206,6 @@ When consuming GTMS metadata:
 * Decode capabilities using bitwise operations.
 * Verify metadata against sampled edges for large external graphs.
 * Use provided metadata to select optimized traversal and analysis strategies.
-
----
 
 ## Related Standards and Formats
 
