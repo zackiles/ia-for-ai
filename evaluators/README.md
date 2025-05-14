@@ -1,0 +1,2 @@
+# Evaluators for AI
+Evaluations are used to provide criteria for which a LLMs can qualify their outputs. They're especially critical in multi-turn or agentic workflows where maintaining coherence is difficult without a static set of qualifiers the LLM can use to evaluate its outcomes. They're the "test-suites for AI" and arguably play a larger role in guiding deterministic outcomes than the prompt that started the turn.  
