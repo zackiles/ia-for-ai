@@ -24,7 +24,7 @@ Architectural planning, tech evaluations
     ```
     {{RESEARCH_DATA}}
     ```
-    *(This section will contain the collated research findings, comparisons of technologies/approaches, articles, case studies, and any other relevant information about the problem space and potential solutions. It might include summaries of documents like "terminal-ui-framework.md" or raw research notes.)*
+    *(This section will contain the collated research findings, comparisons of technologies/approaches, articles, case studies, and any other relevant information about the problem space and potential solutions. It might include summaries of multiple documents, studies, research papers,  or raw research notes from the user.)*
 
 2.  **Problem Statement (`{{PROBLEM_STATEMENT}}`)**:
     ```
@@ -87,6 +87,6 @@ The framework must include the following sections (adapt and add categories as r
 *   **Clarity and Actionability**: The framework should be clear, concise, and provide enough detail for a technical team to make informed decisions.
 *   **Objectivity**: Present options and their analyses based on the provided research, avoiding personal bias.
 *   **Completeness**: Cover all critical aspects suggested by the research and necessary for the problem domain. If research is sparse in an area critical to the problem statement, note this as a potential area for further investigation.
-*   **Structure**: Adhere strictly to the specified output format.
+*   **Structure**: Adhere strictly to the specified output format. Optimize content to interpreted and acted on by an advanced AI agent or LLM.
 
 ````
