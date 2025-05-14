@@ -10,7 +10,7 @@ Architectural planning, tech evaluations
 
 ````markdown
 
-### **Prompt Template: Generate Structured Decision-Making Framework**
+# **Prompt Template: Generate Structured Decision-Making Framework**
 
 **Objective**: To generate a structured decision-making framework for designing or evaluating a software system/component that addresses a specific problem, based on provided research.
 
@@ -64,7 +64,7 @@ The framework must include the following sections (adapt and add categories as r
 **Example Snippet (Illustrative)**:
 
 ```markdown
-### **3. Rendering & Output**
+## **3. Rendering & Output**
 **Decision Points**:
 - **Graphics Backend Selection**:
   1. Option: ANSI Escape Codes (Truecolor/256-color)
