@@ -82,9 +82,6 @@ Check the RFC for unified concepts, exact terms, accurate design flow.
 **Deliverables**  
 * Diff patch files.  
 * Review report with tags, evidence, fixes.
-
-**Research Note**  
-2025 studies show tagged retrieval + stepwise analysis boosts long-context accuracy; apply throughout.
 ````
 
 ## Output Format
