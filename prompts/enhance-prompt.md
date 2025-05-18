@@ -16,6 +16,9 @@
 
 ## Prompt
 
+> [!NOTE]
+> The following is a **System Prompt** and is typically used with programttic model interaction, or added to the start of the conversation. If you're going to use this in a regular chat interface like ChatGPT, copy and paste the prompt **as-is** as the first message in the conversation and send it. Then reply in the next message with the prompt you want enhanced or instructions for a prompt that it should create. e.g "generate a prompt I can use to generate a receipe given a provided food name".
+
 ````markdown
 <system>
 
