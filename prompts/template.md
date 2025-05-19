@@ -19,7 +19,6 @@ Use this format as a "prompt wrapper" to ensure clarity and reusability in promp
 
 ## Prompt
 ````markdown
-<!--RAWM PROMPT GOES HERE. EXAMPLE FOR ILLUSTRATION BELOW -->
 # Prompt Template: [Insert Prompt Name Here]
 
 ## Objective
